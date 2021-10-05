@@ -3,12 +3,35 @@
  */
 package edu.isu.cs2263.hw02;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+
+public class App extends Application{
+
+//    @Override
+//    public void start(Stage stage) throws Exception {
+//        Parent root = FXMLLoader.load(getClass().getResource("scene.fxml"));
+//
+//        Scene scene = new Scene(root);
+//        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+//
+//        stage.setTitle("JavaFX and Gradle");
+//        stage.setScene(scene);
+//        stage.show();
+//    }
+
+@Override
+public void start(Stage primaryStage) throws Exception {
+    primaryStage.setTitle("My First JavaFX App");
+
+    primaryStage.show();
+}
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        launch(args);
     }
 }

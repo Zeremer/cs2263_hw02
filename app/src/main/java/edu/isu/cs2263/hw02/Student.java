@@ -1,4 +1,4 @@
-package edu.isu.cs2263.hw02b;
+package edu.isu.cs2263.hw02;
 
 import java.util.List;
 
