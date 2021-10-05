@@ -1,5 +1,5 @@
 # Title
-*version 0.0.1*
+*version 1.0.0*
 
 ## Description
 Currently the project is in a very alpha state.
