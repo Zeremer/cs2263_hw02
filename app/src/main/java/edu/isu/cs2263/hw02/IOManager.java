@@ -1,4 +1,5 @@
 package edu.isu.cs2263.hw02;
+import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.Gson;
 import java.util.Collection;
@@ -19,12 +20,24 @@ public class IOManager {
         String json = scanner.nextLine();
         return gson.fromJson(json, Student[].class);
     }
+    public ArrayList<Student> readData(File file) throws FileNotFoundException {
+        Scanner scanner = new Scanner(file);
+        ArrayList<Student> studentBox = new ArrayList<Student>();
+        while(scanner.hasNext()){
+            String json = scanner.nextLine();
+           Student nextStud = gson.fromJson(json, Student.class);
+           studentBox.add(nextStud);
+        }
+        scanner.close();
+        return studentBox;
+    }
+
 
     public void writeData(String file, List<Student> data){
         try {
             File write_file = this.createFile(file);
             if (write_file.isFile()) {
-                FileWriter writer = new FileWriter(write_file, true);
+                FileWriter writer = new FileWriter(write_file, false);
                 String Json = gson.toJson(data);
                 writer.write(Json);
                 writer.write("\n");
@@ -36,16 +49,39 @@ public class IOManager {
         catch (IOException e){
             System.out.println("An error occurred writing to file.");
             e.printStackTrace();
-
         }
     }
+
+    public void writeData(File file, String fileName, ArrayList<Student> data){
+        try {
+            if (file.isDirectory()) {
+                file = this.createFile(file + "/" + fileName);
+                FileWriter writer = new FileWriter(file, true);
+                for (Student stud : data){
+                    String json = gson.toJson(stud);
+                    writer.write(json);
+                    writer.write("\n");
+                    System.out.println("Wrote to file: " + file);
+                }
+                writer.close();
+            }
+            else {
+                System.out.println("Problem writing to file.");
+            }
+        }
+        catch (IOException e){
+            System.out.println("An error occurred writing to file.");
+            e.printStackTrace();
+        }
+    }
+
     private File createFile(String file) {
         File write_file = new File(file);
         try {
             if (write_file.createNewFile()) {
                 System.out.println("File create: " + write_file.getName());
             } else {
-                System.out.println("Problem creating file.");
+                System.out.println("File may already exist.");
             }
         } catch (IOException e) {
             System.out.println("An error occurred creating a file.");

@@ -1,13 +1,14 @@
 package edu.isu.cs2263.hw02;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
 
     // Class variables
-    private String firstName;
-    private String lastName;
-    private List<Course> course_list;
+    public String firstName = "";
+    public String lastName = "";
+    public ArrayList<Course> course_list = new ArrayList<Course>();
 
     // Class methods
     // Setters
@@ -21,10 +22,14 @@ public class Student {
     // Getters
     public String getFirstName(){return this.firstName;}
     public String getLastName(){return this.lastName;}
+    public ArrayList<Course> getCourses(){return course_list;}
 
     // Course methods
     public void addCourse(Course course){
-        if(course_list.contains(course)){
+        if(course_list == null){
+            this.course_list.add(course);
+        }
+        else if(course_list.contains(course)){
             System.out.println("Student already has this course.");
         }
         else{

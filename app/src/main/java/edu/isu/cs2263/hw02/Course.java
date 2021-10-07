@@ -3,9 +3,9 @@ package edu.isu.cs2263.hw02;
 public class Course {
 
     // Class variables
-    private int number;
-    private String subject;
-    private String title;
+    public int number;
+    public String subject;
+    public String title;
 
 
     // Class methods
@@ -26,7 +26,7 @@ public class Course {
     public String getTitle(){return title;}
 
     // Other Methods
-    public String toString(){return title;}
+    public String toString(){return subject + number + " " + title;}
 
 
     // Class Constructors
