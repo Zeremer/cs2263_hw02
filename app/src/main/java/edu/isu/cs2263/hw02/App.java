@@ -29,7 +29,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * This App is used to provide a GUI that looks at students and the courses that they have.
+ * @Author Hunter Chase
+ * @Version %I%, %G%
+ */
 public class App extends Application{
 
 //    @Override
@@ -46,23 +50,23 @@ public class App extends Application{
 
 @Override
 public void start(Stage primaryStage) throws Exception {
-    // Variables
-    Course cs1181 = new Course(1181, "CS", "Intro to Computer Science");
-    Course cs2222 = new Course(2222, "CS", "Advanced Computer Science");
-    Course cs3030 = new Course(3030, "CS", "Extreme Computer Science");
-    Course math1010 = new Course(1010, "MATH", "Intro to Math");
-    Course math2121 = new Course(2121, "MATH", "Advanced Math");
-    Course math3210 = new Course(3210, "MATH", "Extreme Math");
-
-    Student bob = new Student("bob", "guy");
-    bob.addCourse(cs1181);
-    bob.addCourse(cs2222);
-    bob.addCourse(cs3030);
-
-    Student sally = new Student("sally", "gal");
-    sally.addCourse(math1010);
-    sally.addCourse(math2121);
-    sally.addCourse(math3210);
+    // Variables used to create a load file
+//    Course cs1181 = new Course(1181, "CS", "Intro to Computer Science");
+//    Course cs2222 = new Course(2222, "CS", "Advanced Computer Science");
+//    Course cs3030 = new Course(3030, "CS", "Extreme Computer Science");
+//    Course math1010 = new Course(1010, "MATH", "Intro to Math");
+//    Course math2121 = new Course(2121, "MATH", "Advanced Math");
+//    Course math3210 = new Course(3210, "MATH", "Extreme Math");
+//
+//    Student bob = new Student("bob", "guy");
+//    bob.addCourse(cs1181);
+//    bob.addCourse(cs2222);
+//    bob.addCourse(cs3030);
+//
+//    Student sally = new Student("sally", "gal");
+//    sally.addCourse(math1010);
+//    sally.addCourse(math2121);
+//    sally.addCourse(math3210);
 
     ArrayList<Student> studentList = new ArrayList<>();
 //    studentList.add(bob);
@@ -92,20 +96,21 @@ public void start(Stage primaryStage) throws Exception {
     read.setOnAction(event -> {
         int stuNum = students.getSelectionModel().getSelectedIndex();
         Student currentStudent = studentList.get(stuNum);
-        List<Integer> selectedItemsCopy = new ArrayList<>(courses.getSelectionModel().getSelectedItems());
-        courses.getItems().removeAll(selectedItemsCopy);
+        ObservableList classes = courses.getItems();
+            courses.getItems().removeAll(classes);
         for (Course courz : currentStudent.getCourses())
-            courses.getItems().add(courz.toString());
+            courses.getItems().addAll(courz.toString());
         });
 
-    //Maybe auto change?
+    //Maybe selection change to eliminate read button?
 //    students.getSelectionModel().selectedItemProperty().addListener(
 //            (ChangeListener<String>) (ov, old_val, new_val) -> {
-//                System.out.println(old_val);
-//                ObservableList studns = students.getSelectionModel().getSelectedIndices();
-//                System.out.println(studns);
-//                Student curr = studentList.get(studns.indexOf(old_val));
-//                System.out.println(curr);
+//    int stuNum = students.getSelectionModel().getSelectedIndex();
+//    Student currentStudent = studentList.get(stuNum);
+//    ObservableList classes = courses.getItems();
+//    courses.getItems().removeAll(classes);
+//    for (Course courz : currentStudent.getCourses())
+//        courses.getItems().addAll(courz.toString());
 //            });
 
     // Labels for lists
@@ -156,8 +161,8 @@ public void start(Stage primaryStage) throws Exception {
     clear.setOnAction(new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent clickLoad) {
-            students.getItems().removeAll(students.getSelectionModel().getSelectedIndices());
-            courses.getItems().removeAll(courses.getSelectionModel().getSelectedIndices());
+            students.getItems().removeAll(students.getSelectionModel().getSelectedItems());
+            courses.getItems().removeAll(courses.getSelectionModel().getSelectedItems());
         }
     });
 
