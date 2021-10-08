@@ -36,6 +36,19 @@ import java.util.List;
  */
 public class App extends Application{
 
+    /**
+     * I think this helper section functions as a singleton?
+     */
+    private App() {}
+
+    private static final class Helper {
+        private static final App INSTANCE = new App();
+    }
+
+    public static App instance() {
+        return Helper.INSTANCE;
+    }
+
 //    @Override
 //    public void start(Stage stage) throws Exception {
 //        Parent root = FXMLLoader.load(getClass().getResource("scene.fxml"));
