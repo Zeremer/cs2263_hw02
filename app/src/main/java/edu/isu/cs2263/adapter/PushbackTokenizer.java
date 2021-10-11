@@ -44,6 +44,7 @@ public class PushbackTokenizer implements PushbackTokenizerImp {
 
     // Constructor
     public PushbackTokenizer(String str){
-        st = new StringTokenizer(str);
+        this.st = new StringTokenizer(str);
+        this.next = st.nextToken();
     }
 }
