@@ -9,10 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Testing
 
-## [2.0.0] - 9-12-2021
+## [2.1.0] - 9-12-2021
 ### Added
 - Added adapter for token
-
+- Added PushbackTokenizer class
+  - This class has testing for all current methods
 
 ### Changed
 - Changelog.md

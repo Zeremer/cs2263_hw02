@@ -4,6 +4,7 @@
 ## Description
 Project can now bring in an ArrayList containing student objects stored as Json by Gson.
 The app can also save the ArrayList back into the system with Gson, but this is mostly useless as it cant edit much.
+Also has an adapter for Stringtokenizer that can pushback called PushbackTokenizer. This class has testing.
 
 #### Table of Contents
 - Title
