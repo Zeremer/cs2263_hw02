@@ -98,12 +98,14 @@ public class FX extends Application {
             @Override
             public void changed(ObservableValue<? extends Student> observable,
                                 Student oldValue, Student newValue) {
-                int stuNum = students.getSelectionModel().getSelectedIndex();
-                Student currentStudent = studentList.get(stuNum);
-                ObservableList classes = courses.getItems();
-                courses.getItems().removeAll(classes);
-                for (Course courz : currentStudent.getCourses())
-                    courses.getItems().addAll(courz.toString());
+                if (!students.getSelectionModel().isEmpty()) {
+                    int stuNum = students.getSelectionModel().getSelectedIndex();
+                    Student currentStudent = studentList.get(stuNum);
+                    ObservableList classes = courses.getItems();
+                    courses.getItems().removeAll(classes);
+                    for (Course courz : currentStudent.getCourses())
+                        courses.getItems().addAll(courz.toString());
+                }
             }
         });
 
@@ -154,6 +156,7 @@ public class FX extends Application {
         clear.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent clickLoad) {
+                students.getSelectionModel().clearSelection();
                 ObservableList classes = courses.getItems();
                 courses.getItems().removeAll(classes);
                 ObservableList studs = students.getItems();
