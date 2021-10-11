@@ -1,5 +1,5 @@
 # Title
-*version 2.0.0*
+*version 2.1.0*
 
 ## Description
 Project can now bring in an ArrayList containing student objects stored as Json by Gson.
@@ -23,6 +23,7 @@ Also has an adapter for Stringtokenizer that can pushback called PushbackTokeniz
 
 ### Usage
 - Run this program though gradle or an IDE.
+  - Includeds a sample Student ArrayList to load in though Gson at ...\cs2263_hw02\app\src\main\resources\edu\isu\cs2263\hw02\StudentArrayList
 - App is a singleton.
 
 ### Contributing
