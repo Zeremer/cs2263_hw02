@@ -7,7 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
-- Adapters and testing
+- Testing
+
+
+
+## [2.1.0] - 9-12-2021
+### Added
+- Added adapter for token
+- Added PushbackTokenizer class
+  - This class has testing for all current methods
+
+
+### Changed
+- Changelog.md
+- README.md
+
+
+### Removed
+
 
 
 ## [2.0.0] - 9-12-2021
@@ -43,6 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: https://github.com/Zeremer/<project>.git...Head
+[2.1.0]: https://github.com/Zeremer/<project>.git...v2.1.0
 [2.0.0]: https://github.com/Zeremer/<project>.git...v2.0.0
 [1.0.0]: https://github.com/Zeremer/<project>.git...v1.0.0
 [0.0.1]: https://github.com/Zeremer/<project>.git...v0.0.1

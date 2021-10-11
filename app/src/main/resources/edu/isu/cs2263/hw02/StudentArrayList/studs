@@ -1,0 +1,2 @@
+{"firstName":"bob","lastName":"guy","course_list":[{"number":1181,"subject":"CS","title":"Intro to Computer Science"},{"number":2222,"subject":"CS","title":"Advanced Computer Science"},{"number":3030,"subject":"CS","title":"Extreme Computer Science"}]}
+{"firstName":"sally","lastName":"gal","course_list":[{"number":1010,"subject":"MATH","title":"Intro to Math"},{"number":2121,"subject":"MATH","title":"Advanced Math"},{"number":3210,"subject":"MATH","title":"Extreme Math"}]}
