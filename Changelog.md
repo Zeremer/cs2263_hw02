@@ -7,7 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
-- basicness
+- Adapters and testing
+
+
+## [2.0.0] - 9-12-2021
+### Added
+- Now has a UI
+  - Can bring in students and save students with Gson
+- Runs as singleton
+
+
+### Changed
+- Changelog.md
+- README.md
+
+
+### Removed
 
 
 
@@ -28,4 +43,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: https://github.com/Zeremer/<project>.git...Head
+[2.0.0]: https://github.com/Zeremer/<project>.git...v2.0.0
+[1.0.0]: https://github.com/Zeremer/<project>.git...v1.0.0
 [0.0.1]: https://github.com/Zeremer/<project>.git...v0.0.1

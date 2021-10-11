@@ -61,7 +61,6 @@ public class Student {
     }
 
     // Other methods
-
     /**
      * This method is used to get a string representation of the particular student.
      * @return String returned is the student's first then last name.
@@ -70,7 +69,6 @@ public class Student {
 
 
     // Class Constructors
-
     /**
      * This constructor is intentionally left empty for the use of google's gson.
      */

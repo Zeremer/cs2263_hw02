@@ -1,8 +1,9 @@
 # Title
-*version 1.0.0*
+*version 2.0.0*
 
 ## Description
-Currently the project is in a very alpha state.
+Project can now bring in an ArrayList containing student objects stored as Json by Gson.
+The app can also save the ArrayList back into the system with Gson, but this is mostly useless as it cant edit much.
 
 #### Table of Contents
 - Title
@@ -20,8 +21,8 @@ Currently the project is in a very alpha state.
 
 
 ### Usage
-- Run this program though gradle.
-
+- Run this program though gradle or an IDE.
+- App is a singleton.
 
 ### Contributing
 This project is not currently accepting any external contributors.
