@@ -7,7 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
-- Adapters and testing
+- Testing
+
+## [2.0.0] - 9-12-2021
+### Added
+- Added adapter for token
+
+
+### Changed
+- Changelog.md
+- README.md
+
+
+### Removed
+
 
 
 ## [2.0.0] - 9-12-2021
