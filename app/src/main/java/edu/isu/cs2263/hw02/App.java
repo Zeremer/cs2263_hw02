@@ -20,7 +20,7 @@ public class App{
     /**
      * Singleton instance for main app
      */
-    public App() {
+    private App() {
             // private constructor
         }
         // Inner class to provide instance of class
